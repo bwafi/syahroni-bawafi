@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.small-button:hover {
+  @apply shadow-[4px_4px_0_0_#64ffda];
+}
