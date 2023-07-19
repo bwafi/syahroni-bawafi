@@ -5,3 +5,7 @@
 .small-button:hover {
   @apply shadow-[4px_4px_0_0_#64ffda];
 }
+
+.list::before {
+  @apply absolute content-['▹'] text-green left-0 text-sm bottom-0.5;
+}

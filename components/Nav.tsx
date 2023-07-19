@@ -9,8 +9,8 @@ interface link {
 
 const Nav = () => {
   return (
-    <header className="w-full mx-auto">
-      <nav className="w-full mx-auto py-5 flex justify-between items-center">
+    <header className="w-full mx-auto fixed top-0 bg-navy left-0 z-50">
+      <nav className="w-full mx-auto py-5 px-12 flex justify-between items-center">
         <div>
           <h1 className="text-green text-3xl font-sfMono font-semibold">SB</h1>
         </div>
@@ -19,7 +19,7 @@ const Nav = () => {
             {navLinks.map((navlink: link, index: number) => (
               <li
                 key={index}
-                className="text-sm text-white font-sfMono hover:text-green transition-colors ease-button"
+                className="text-sm font-sfMono hover:text-green transition-colors ease-button"
               >
                 <Link href={navlink.url}>
                   <span className="text-green mr-0.5">0{index + 1}.</span>
@@ -29,7 +29,7 @@ const Nav = () => {
             ))}
           </ul>
           <div>
-            <button className="text-green bg-transparent border border-green py-1.5 px-4 rounded text-sm small-button  hover:-translate-x-1 hover:-translate-y-1 transition-all duration-300 ease-button">
+            <button className="text-green font-sfMono bg-transparent border border-green py-1.5 px-4 rounded text-sm small-button  hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200 ease-button">
               Resume
             </button>
           </div>

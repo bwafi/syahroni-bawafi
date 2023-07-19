@@ -2,15 +2,19 @@ import React, { ReactNode } from "react";
 import Nav from "./Nav";
 import Social from "./Social";
 import Email from "./Email";
+import Footer from "./Footer";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="flex mx-12 justify-between">
+    <div className="w-full mx-auto flex flex-col min-h-screen">
       <Nav />
       <Social />
       <Email />
 
-      <div>{children}</div>
+      <div className="grid flex-1 place-items-center">
+        {children}
+        <Footer />
+      </div>
     </div>
   );
 };
