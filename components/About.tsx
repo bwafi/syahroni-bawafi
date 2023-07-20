@@ -1,3 +1,5 @@
+import Image from "next/image";
+import me from "../public/image/me.jpg";
 import React from "react";
 
 const About = () => {
@@ -5,7 +7,7 @@ const About = () => {
     "HTML5",
     "CSS3",
     "Tailwind CSS",
-    "Bootstrap",
+    "TypeScript",
     "Javascript (ES6)",
     "React Js",
     "Next Js",
@@ -14,11 +16,11 @@ const About = () => {
 
   return (
     <section className="py-28 w-full flex flex-col px-10">
-      <h1 className="w-full flex items-center relative gap-3 text-lightes-slate text-3xl font-calibre font-semibold before:content-['01.'] before:relative before:bottom-1 before:text-green before:font-sfMono before:text-lg before:font-normal after:content-[''] after:block after:relative after:h-[2px] after:w-48 after:bg-lightes-navy">
+      <h1 className="w-full flex items-center relative gap-3 text-lightes-slate text-3xl font-calibre font-semibold before:content-['01.'] before:relative before:bottom-1 before:text-green before:font-sfMono before:text-lg before:font-normal after:content-[''] after:block after:relative after:h-[2px] after:w-4/12 after:bg-lightes-navy">
         About me
       </h1>
-      <div className="text-slate my-5 w-7/12">
-        <div>
+      <div className="flex gap-10">
+        <div className="text-slate my-5 w-7/12">
           <p className="text-xl leading-tight mb-4">
             I am a passionate Front-end Developer with a strong determination to
             excel in the world of web development. Self-motivated and driven, I
@@ -43,14 +45,23 @@ const About = () => {
           <p className="text-xl leading-tight mb-2">
             Here are a few technologies I’ve been working with recently:
           </p>
+          <ul className="grid grid-cols-2 font-sfMono text-[13px] gap-1">
+            {skills.map((skill, index) => (
+              <li key={index} className="list relative pl-4">
+                {skill}
+              </li>
+            ))}
+          </ul>
         </div>
-        <ul className="grid grid-cols-2 font-sfMono text-[13px] gap-1">
-          {skills.map((skill, index) => (
-            <li key={index} className="list relative pl-4">
-              {skill}
-            </li>
-          ))}
-        </ul>
+        <div className="w-[300px] h-[300px]">
+          <Image
+            src={"/image/me.jpg"}
+            alt="Syahroni Bawafi"
+            width={300}
+            height={300}
+            className="rounded mt-10"
+          />
+        </div>
       </div>
     </section>
   );

@@ -15,7 +15,7 @@ const Hero = () => {
       <p className="w-7/12 text-slate text-[20px] leading-[26px] font-calibre mt-5">
         I'm a Front-nd Developer, I'm dedicated to building amazing digital
         products. I am passionate about contributing to innovative projects and
-        ready to learn and grow in my career as a Front-end Developer
+        ready to learn and grow in my career as a Software Software Engineering
       </p>
       <button className="mt-16 font-sfMono small-button text-sm rounded text-green py-3 px-8 border border-green hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200 ease-button">
         Download My Resume / CV
