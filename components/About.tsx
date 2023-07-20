@@ -1,6 +1,7 @@
 import Image from "next/image";
 import me from "../public/image/me.jpg";
 import React from "react";
+import Title from "./ui/Title";
 
 const About = () => {
   const skills = [
@@ -15,10 +16,8 @@ const About = () => {
   ];
 
   return (
-    <section className="py-28 w-full flex flex-col px-10">
-      <h1 className="w-full flex items-center relative gap-3 text-lightes-slate text-3xl font-calibre font-semibold before:content-['02.'] before:relative before:bottom-1 before:text-green before:font-sfMono before:text-lg before:font-normal after:content-[''] after:block after:relative after:h-[2px] after:w-4/12 after:bg-lightes-navy">
-        About me
-      </h1>
+    <section className="py-36 w-full flex flex-col px-14">
+      <Title index="01.">About me</Title>
       <div className="flex gap-14">
         <div className="text-slate my-5 w-7/12">
           <p className="text-xl leading-tight mb-4">

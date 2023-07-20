@@ -1,0 +1,18 @@
+{
+  "projects": [
+    {
+      "name": "Quran Portal",
+      "desc": "A web based Quran app that uses the public API from ivory, equipped with several features such as dark theme, murottal, Indonesian translation, interpretation of surah/verses, and several other features",
+      "tech": ["Next JS", "Tailwind CSS", "Redux Toolkit"],
+      "github": "https://github.com/bwafi/quran-portal",
+      "url": "https://quran-portal.vercel.app/"
+    },
+    {
+      "name": "Chomp Restaurant",
+      "desc": "A web based Quran app that uses the public API from ivory, equipped with several features such as dark theme, murottal, Indonesian translation, interpretation of surah/verses, and several other features",
+      "tech": ["Next JS", "Tailwind CSS", "React Context"],
+      "github": "https://github.com/bwafi/chomp-restaurant",
+      "url": "https://chomp-restaurant-syahroni.vercel.app/"
+    }
+  ]
+}
