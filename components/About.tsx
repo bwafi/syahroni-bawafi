@@ -19,7 +19,7 @@ const About = () => {
       <h1 className="w-full flex items-center relative gap-3 text-lightes-slate text-3xl font-calibre font-semibold before:content-['01.'] before:relative before:bottom-1 before:text-green before:font-sfMono before:text-lg before:font-normal after:content-[''] after:block after:relative after:h-[2px] after:w-4/12 after:bg-lightes-navy">
         About me
       </h1>
-      <div className="flex gap-10">
+      <div className="flex gap-14">
         <div className="text-slate my-5 w-7/12">
           <p className="text-xl leading-tight mb-4">
             I am a passionate Front-end Developer with a strong determination to
@@ -53,13 +53,13 @@ const About = () => {
             ))}
           </ul>
         </div>
-        <div className="w-[300px] h-[300px]">
+        <div className="rounded group relative mt-10 w-[300px] h-[300px] before:z-20 before:content-[''] before:rounded before:w-full before:h-full before:absolute before:bg-green/60 after:content-[''] after:rounded after:absolute after:w-full after:h-full after:border-2 after:border-green after:top-4 after:left-4 hover:before:bg-transparent hover:after:translate-x-1 hover:after:translate-y-1 after:transition-all after:ease-button before:transition-opacity">
           <Image
             src={"/image/me.jpg"}
             alt="Syahroni Bawafi"
             width={300}
             height={300}
-            className="rounded mt-10"
+            className="rounded absolute z-10 group-hover:-translate-y-1 group-hover:-translate-x-1 transition-transform"
           />
         </div>
       </div>
