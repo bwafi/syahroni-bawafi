@@ -11,7 +11,7 @@ const Layout = ({ children }: { children: ReactNode }) => {
       <Social />
       <Email />
 
-      <div className="grid flex-1 place-items-center">
+      <div className="grid flex-1 place-items-center min-h-full">
         {children}
         <Footer />
       </div>

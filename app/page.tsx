@@ -1,15 +1,15 @@
 import About from "@/components/About";
+import Featured from "@/components/Featured";
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
-import Project from "@/components/Project";
 
 export default function Home() {
   return (
     <Layout>
-      <main className="w-full mx-auto px-40 overflow-y-auto">
+      <main className="w-full mx-auto px-40">
         <Hero />
         <About />
-        <Project />
+        <Featured />
       </main>
     </Layout>
   );
