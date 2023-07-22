@@ -21,22 +21,25 @@ const Featured = () => {
   return (
     <section className="w-full my-10 mx-auto px-5 ">
       <Title index="02.">Some Things I’ve Built</Title>
-      <ul className="flex flex-col gap-24 mt-10">
+      <ul className="flex flex-col gap-36 mt-10">
         {projects.map((project, index) => (
           <li
             key={index}
             className={`flex relative items-center w-full ${
               index % 2 === 0 ? "flex-row" : "flex-row-reverse"
             }`}>
-            <div className="max-w-3xl bg-green">
-              <div className="w-full mix-blend-multiply grayscale contrast-100 brightness-40">
+            <div className="max-w-3xl bg-green group z-20">
+              <a
+                href={project.url}
+                target="_blank"
+                className="w-full mix-blend-multiply grayscale contrast-100 brightness-40 group-hover:filter-none group-hover:mix-blend-normal transition-all ease-button">
                 <Image
                   src={project.image}
                   alt={project.name}
                   width={600}
                   height={300}
                 />
-              </div>
+              </a>
             </div>
             <div
               className={`absolute w-6/12 ${
@@ -45,10 +48,15 @@ const Featured = () => {
               <h4 className="font-sfMono text-sm text-green mb-3">
                 Featured Project
               </h4>
-              <h1 className="font-calibre font-semibold text-3xl hover:text-green transition-colors">
-                {project.name}
+              <h1>
+                <a
+                  className="font-calibre font-semibold text-3xl hover:text-green transition-colors"
+                  href={project.url}
+                  target="_blank">
+                  {project.name}
+                </a>
               </h1>
-              <div className="bg-light-navy rounded-md shadow-navy py-4 px-6 my-3">
+              <div className="bg-light-navy rounded-md shadow-navy py-4 px-6 my-3 relative z-50">
                 <ReactMarkdown
                   className="text-lg leading-tight"
                   components={{
