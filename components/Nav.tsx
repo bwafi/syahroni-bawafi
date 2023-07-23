@@ -10,17 +10,16 @@ interface link {
 const Nav = () => {
   return (
     <header className="w-full mx-auto fixed top-0 bg-navy left-0 z-50">
-      <nav className="w-full mx-auto py-5 px-12 flex justify-between items-center">
+      <nav className="w-full mx-auto py-5 px-6 lg:px-12 flex justify-between items-center">
         <div>
           <h1 className="text-green text-3xl font-sfMono font-semibold">SB</h1>
         </div>
-        <div className="flex gap-8 items-center">
+        <div className="hidden md:flex gap-7 items-center">
           <ul className="flex gap-5">
             {navLinks.map((navlink: link, index: number) => (
               <li
                 key={index}
-                className="text-sm font-sfMono hover:text-green transition-colors ease-button"
-              >
+                className="text-sm font-sfMono hover:text-green transition-colors ease-button">
                 <Link href={navlink.url}>
                   <span className="text-green mr-0.5">0{index + 1}.</span>
                   {navlink.name}

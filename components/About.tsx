@@ -16,18 +16,18 @@ const About = () => {
   ];
 
   return (
-    <section className="py-36 w-full flex flex-col px-14">
+    <section className="py-36 w-full flex flex-col md:px-14">
       <Title index="01.">About me</Title>
-      <div className="flex gap-14">
-        <div className="text-slate my-5 w-7/12">
-          <p className="text-xl leading-tight mb-4">
+      <div className="flex flex-col gap-14">
+        <div className="text-slate my-5 w-full md:w-7/12">
+          <p className="text-lg md:text-xl leading-tight mb-4">
             I am a passionate Front-end Developer with a strong determination to
             excel in the world of web development. Self-motivated and driven, I
             have honed my skills through self-directed learning, exploring the
             latest trends, and mastering various front-end technologies on my
             own.
           </p>
-          <p className="text-xl leading-tight mb-4">
+          <p className="text-lg md:text-xl leading-tight mb-4">
             My journey as an autodidact in web development has been a rewarding
             experience, as it allowed me to continuously challenge myself and
             stay curious about emerging technologies and best practices. From
@@ -35,16 +35,16 @@ const About = () => {
             performance, I take pride in creating seamless and visually
             appealing digital experiences.
           </p>
-          <p className="text-xl leading-tight mb-4">
+          <p className="text-lg md:text-xl leading-tight mb-4">
             Throughout my learning journey, I have come to understand the
             importance of user-centric design and accessibility. I am committed
             to crafting websites that are not only visually stunning but also
             intuitive and inclusive for all users.
           </p>
-          <p className="text-xl leading-tight mb-2">
+          <p className="text-lg md:text-xl leading-tight mb-2">
             Here are a few technologies I’ve been working with recently:
           </p>
-          <ul className="grid grid-cols-2 font-sfMono text-[13px] gap-1">
+          <ul className="grid grid-cols-2 font-sfMono text-[13px] gap-1 ">
             {skills.map((skill, index) => (
               <li key={index} className="list relative pl-4">
                 {skill}
@@ -52,7 +52,7 @@ const About = () => {
             ))}
           </ul>
         </div>
-        <div className="img-bg img-border rounded group relative mt-10 w-[300px] h-[300px]">
+        <div className="img-bg mx-auto img-border rounded group relative md:mt-10 aspect-square w-[180px] md:w-[300px]">
           <Image
             src={"/image/me.jpg"}
             alt="Syahroni Bawafi"

@@ -7,7 +7,7 @@
 }
 
 .list::before {
-  @apply absolute content-['▹'] text-green left-0 text-sm bottom-0.5;
+  @apply absolute top-0 content-['▹'] text-green left-0 text-sm bottom-0.5;
 }
 
 .img-bg::before {
@@ -16,4 +16,8 @@
 
 .img-border::after {
   @apply content-[''] -z-10 rounded absolute w-full h-full border-2 border-green top-4 left-4 hover:translate-x-1 hover:translate-y-1 transition-all duration-300 ease-button;
+}
+
+.big-heading {
+  font-size: clamp(40px, 8vw, 80px);
 }

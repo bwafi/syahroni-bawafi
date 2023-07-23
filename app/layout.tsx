@@ -15,8 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${calibre.variable} ${sfMono.variable} bg-navy text-lightes-slate font-calibre`}
-      >
+        className={`${calibre.variable} ${sfMono.variable} bg-navy text-lightes-slate font-calibre`}>
         {children}
       </body>
     </html>
