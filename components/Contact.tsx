@@ -2,12 +2,14 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section className="w-full mx-auto my-40 text-center px-64">
-      <h3 className="text-green font-sfMono before:content-['04.'] before:mr-0.5">
+    <section className="w-full mx-auto my-40 text-center md:px-64">
+      <h3 className="text-sm md:text-base text-green font-sfMono before:content-['04.'] before:mr-0.5">
         What's Next?
       </h3>
-      <h1 className="text-6xl font-calibre font-semibold my-5">Get in Touch</h1>
-      <p className="font-calibre text-xl text-slate">
+      <h1 className="text-4xl lg:text-6xl font-calibre font-semibold my-5">
+        Get in Touch
+      </h1>
+      <p className="font-calibre text-lg sm:text-xl text-slate">
         I'm actively seeking new opportunities and my inbox is eagerly open. If
         you have any questions or would like to explore potential
         collaborations, I'd love to hear from you! Feel free to reach me, and

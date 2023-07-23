@@ -19,16 +19,16 @@ const Featured = () => {
   const projects: projectItem[] = projectsData.projects;
   console.log(projects);
   return (
-    <section className="w-full my-10 mx-auto px-5 ">
+    <section className="w-full my-10 mx-auto md:px-5 ">
       <Title index="02.">Some Things I’ve Built</Title>
-      <ul className="flex flex-col gap-36 mt-10">
+      <ul className="flex  flex-col gap-36 mt-10">
         {projects.map((project, index) => (
           <li
             key={index}
-            className={`flex relative items-center w-full ${
+            className={`flex relative items-center h-[700px] w-full ${
               index % 2 === 0 ? "flex-row" : "flex-row-reverse"
             }`}>
-            <div className="max-w-3xl bg-green group z-20">
+            <div className="max-w-3xl absolute bg-green group md:z-19">
               <a
                 href={project.url}
                 target="_blank"
@@ -37,12 +37,12 @@ const Featured = () => {
                   src={project.image}
                   alt={project.name}
                   width={600}
-                  height={300}
+                  height={301}
                 />
               </a>
             </div>
             <div
-              className={`absolute w-6/12 ${
+              className={`absolute w-full md:w-6/12 ${
                 index % 2 === 0 ? "text-right right-0" : "text-left left-0"
               }`}>
               <h4 className="font-sfMono text-sm text-green mb-3">
@@ -56,7 +56,7 @@ const Featured = () => {
                   {project.name}
                 </a>
               </h1>
-              <div className="bg-light-navy rounded-md shadow-navy py-4 px-6 my-3 relative z-50">
+              <div className="bg-light-navy/80 md:bg-light-navy rounded-md shadow-navy py-4 px-6 my-3 relative z-50">
                 <ReactMarkdown
                   className="text-lg leading-tight"
                   components={{

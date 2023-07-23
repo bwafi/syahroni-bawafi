@@ -1,5 +1,4 @@
 import Image from "next/image";
-import me from "../public/image/me.jpg";
 import React from "react";
 import Title from "./ui/Title";
 
