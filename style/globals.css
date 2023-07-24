@@ -26,6 +26,10 @@
   font-size: clamp(40px, 8vw, 80px);
 }
 
+.small-heading {
+  font-size: clamp(24px, 5vw, 28px);
+}
+
 .navy-shadow {
   box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
 }
