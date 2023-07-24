@@ -17,7 +17,7 @@ const About = () => {
   return (
     <section className="py-36 w-full flex flex-col md:px-14">
       <Title index="01.">About me</Title>
-      <div className="flex flex-col gap-14">
+      <div className="flex flex-col md:flex-row gap-14">
         <div className="text-slate my-5 w-full md:w-7/12">
           <p className="text-lg md:text-xl leading-tight mb-4">
             I am a passionate Front-end Developer with a strong determination to

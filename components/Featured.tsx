@@ -17,85 +17,50 @@ interface projectItem {
 
 const Featured = () => {
   const projects: projectItem[] = projectsData.projects;
-  console.log(projects);
   return (
     <section className="w-full my-10 mx-auto md:px-5 ">
       <Title index="02.">Some Things I’ve Built</Title>
-      <ul className="flex  flex-col gap-36 mt-10">
-        {projects.map((project, index) => (
+      <ul className="mt-5 flex flex-col gap-32">
+        {projects.map((project, index: number) => (
           <li
             key={index}
-            className={`flex relative items-center h-[700px] w-full ${
-              index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-            }`}>
-            <div className="max-w-3xl absolute bg-green group md:z-19">
-              <a
-                href={project.url}
-                target="_blank"
-                className="w-full mix-blend-multiply grayscale contrast-100 brightness-40 group-hover:filter-none group-hover:mix-blend-normal transition-all ease-button">
-                <Image
-                  src={project.image}
-                  alt={project.name}
-                  width={600}
-                  height={301}
-                />
-              </a>
-            </div>
-            <div
-              className={`absolute w-full md:w-6/12 ${
-                index % 2 === 0 ? "text-right right-0" : "text-left left-0"
-              }`}>
-              <h4 className="font-sfMono text-sm text-green mb-3">
-                Featured Project
-              </h4>
-              <h1>
-                <a
-                  className="font-calibre font-semibold text-3xl hover:text-green transition-colors"
-                  href={project.url}
-                  target="_blank">
+            className="w-full grid grid-cols-12 items-center group">
+            <div className="relative col-start-6 col-end-13 group-even:col-start-1 group-even:col-end-8 text-right group-even:text-left row-start-1">
+              <p className="text-sm font-sfMono text-green">Featured Project</p>
+              <h1 className="text-3xl font-semibold my-3 ">
+                <a href={project.url} className="hover:text-green">
                   {project.name}
                 </a>
               </h1>
-              <div className="bg-light-navy/80 md:bg-light-navy rounded-md shadow-navy py-4 px-6 my-3 relative z-50">
-                <ReactMarkdown
-                  className="text-lg leading-tight"
-                  components={{
-                    a: ({ node, ...props }) => (
-                      <a
-                        className="text-green hover:border-b hover:border-b-green"
-                        target="_blank"
-                        {...props}
-                      />
-                    ),
-                  }}>
-                  {project.desc}
-                </ReactMarkdown>
+              <div className="bg-light-navy rounded p-5 z-[3] relative navy-shadow">
+                <p className="text-light-slate text-lg ">{project.desc}</p>
               </div>
-              <ul
-                className={`flex font-sfMono gap-5 text-sm text-light-slate ${
-                  index % 2 === 0 ? "justify-end" : "justify-start"
-                }`}>
-                {project.techs.map((tech: string, index: number) => (
+              <ul className="flex justify-end group-even:justify-start gap-5 flex-wrap my-5 text-light-slate font-sfMono text-sm z-[3]">
+                {project.techs.map((tech, index) => (
                   <li key={index}>{tech}</li>
                 ))}
               </ul>
-              <div
-                className={`flex gap-5 mt-4 ${
-                  index % 2 === 0 ? "justify-end" : "justify-start"
-                }`}>
-                <a
-                  href={project.github}
-                  className="text-lightes-slate text-xl hover:text-green transition-colors"
-                  target="_blank">
+              <div className="flex text-2xl group-even:justify-start justify-end gap-5 text-light-slate">
+                <a href={project.github} className="hover:text-green">
                   <FiGithub />
                 </a>
-                <a
-                  href={project.url}
-                  className="text-lightes-slate text-xl hover:text-green transition-colors"
-                  target="_blank">
+                <a href={project.url} className="hover:text-green">
                   <FiExternalLink />
                 </a>
               </div>
+            </div>
+            <div className="group w-full h-full col-start-1 col-end-8 group-even:col-start-6 group-even:col-end-13 z-[1] relative row-start-1 row-end-2">
+              <a
+                href={project.url}
+                className="relative img-bg_featured block w-full h-full bg-green mix-blend-screen">
+                <Image
+                  src={project.image}
+                  alt="Quran Portal"
+                  width={600}
+                  height={300}
+                  className="relative h-full w-full navy-shadow mix-blend-multiply grayscale contrast-90 brightness-90 group-hover:filter-none group-hover:mix-blend-normal"
+                />
+              </a>
             </div>
           </li>
         ))}
