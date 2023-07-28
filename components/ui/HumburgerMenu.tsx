@@ -8,7 +8,7 @@ interface menuProps {
 const HumburgerMenu = ({ isOpen, setIsOpen }: menuProps) => {
   return (
     <button
-      className="flex relative w-10 h-8 overflow-hidden"
+      className="flex md:hidden relative w-10 h-8 overflow-hidden z-50"
       onClick={() => setIsOpen(!isOpen)}>
       <div className="absolute w-10 h-8 flex flex-col items-end justify-center gap-[8px] overflow-hidden">
         <div
@@ -16,11 +16,11 @@ const HumburgerMenu = ({ isOpen, setIsOpen }: menuProps) => {
             isOpen ? "translate-x-10" : ""
           }`}></div>
         <div
-          className={`w-10/12 h-[2px] bg-green rounded-full origin-left transition-transform duration-300 delay-100 ${
+          className={`w-10/12 h-[2px] bg-green rounded-full origin-left transition-transform duration-300 delay-75 ${
             isOpen ? "translate-x-10" : ""
           }`}></div>
         <div
-          className={`w-8/12 h-[2px] bg-green rounded-full origin-left transition-transform duration-300 delay-200 ${
+          className={`w-8/12 h-[2px] bg-green rounded-full origin-left transition-transform duration-300 delay-100 ${
             isOpen ? "translate-x-10" : ""
           }`}></div>
       </div>
