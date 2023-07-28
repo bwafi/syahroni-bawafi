@@ -18,7 +18,7 @@ interface projectItem {
 const Featured = () => {
   const projects: projectItem[] = projectsData.projects;
   return (
-    <section className="w-full my-10 mx-auto md:px-5 ">
+    <section id="portfolio" className="w-full my-10 mx-auto lg:px-5 ">
       <Title index="02.">Some Things I’ve Built</Title>
       <ul className="my-8 flex flex-col gap-10 md:gap-32">
         {projects.map((project, index: number) => (
