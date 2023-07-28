@@ -3,7 +3,7 @@
     {
       "name": "Quran Portal",
       "image": "/featured/quran-portal.png",
-      "desc": "A web based Quran app and prayer schedule that uses the public API from [gadingnst](https://github.com/gadingnst/quran-api), equipped with several features such as dark theme, murottal, Indonesian translation, interpretation of surah/verses, and several other features",
+      "desc": "A web based Quran app and prayer schedule that uses the public API from [gadingnst](https://github.com/gadingnst/quran-api) and prayed schedule API from [lakuapik](https://github.com/lakuapik/jadwalsholatorg), equipped with several features such as dark theme, murottal, Indonesian translation, interpretation of surah/verses, and several other features",
       "techs": ["Next JS", "Tailwind CSS", "Redux Toolkit"],
       "github": "https://github.com/bwafi/quran-portal",
       "url": "https://quran-portal.vercel.app/"

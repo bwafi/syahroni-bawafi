@@ -1,6 +1,8 @@
+"use client";
 import { navLinks } from "@/utils/Links";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import HumburgerMenu from "./ui/HumburgerMenu";
 
 interface link {
   name: string;
@@ -8,6 +10,8 @@ interface link {
 }
 
 const Nav = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+
   return (
     <header className="w-full mx-auto fixed top-0 bg-navy left-0 z-50">
       <nav className="w-full mx-auto py-5 px-6 lg:px-12 flex justify-between items-center">
@@ -27,12 +31,15 @@ const Nav = () => {
               </li>
             ))}
           </ul>
+
           <div>
             <button className="text-green font-sfMono bg-transparent border border-green py-1.5 px-4 rounded text-sm small-button  hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200 ease-button">
               Resume
             </button>
           </div>
         </div>
+
+        <HumburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
       </nav>
     </header>
   );
