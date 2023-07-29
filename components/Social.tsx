@@ -9,7 +9,7 @@ import {
 
 const Social = () => {
   return (
-    <div className="hidden md:block fixed text-light-slate bottom-0 left-11">
+    <div className="hidden md:block fixed text-light-slate bottom-0 left-8 lg:left-11">
       <ul className="flex flex-col items-center gap-6 text-xl after:content-[''] after:block  after:h-32 after:w-[1px] after:bg-light-slate after:bottom-0">
         <li>
           <a href="https://github.com/bwafi" target="_blank">

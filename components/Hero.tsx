@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section id="home" className="w-full mt-28 md:mt-32">
+    <section id="home" className="w-full pt-28 md:pt-32">
       <div>
         <p className="text-green font-sfMono mb-4 md:mb-8 text-sm sm:text-base">
           Hi, my name is

@@ -2,7 +2,9 @@ import React from "react";
 
 const Contact = () => {
   return (
-    <section className="w-full mx-auto my-40 text-center md:px-64">
+    <section
+      id="contact"
+      className="w-full mx-auto py-24 sm:py-32 text-center md:px-64">
       <h3 className="text-sm md:text-base text-green font-sfMono before:content-['04.'] before:mr-0.5">
         What's Next?
       </h3>

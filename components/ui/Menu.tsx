@@ -1,6 +1,6 @@
-import React, { Dispatch, FC, SetStateAction } from "react";
+"use client";
+import React, { Dispatch, FC, SetStateAction, useEffect, useRef } from "react";
 import { navLinks } from "@/utils/Links";
-import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 
 interface link {
@@ -14,6 +14,30 @@ interface menuType {
 }
 
 const Menu: FC<menuType> = ({ isOpen, setIsOpen }) => {
+  const menuRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handlerOutSide = (event: MouseEvent) => {
+      console.log(menuRef.current);
+      console.log(menuRef.current?.contains(event.target as Node));
+      if (
+        isOpen &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    // Tambahkan event listener ke objek 'document'
+    document.addEventListener("click", handlerOutSide);
+
+    return () => {
+      // Hapus event listener ketika komponen dibongkar (unmounted)
+      document.removeEventListener("click", handlerOutSide);
+    };
+  }, [isOpen, setIsOpen]);
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -21,21 +45,22 @@ const Menu: FC<menuType> = ({ isOpen, setIsOpen }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className={`absolute md:static left-0 top-0 w-full md:w-fit h-screen md:h-fit bg-navy/30 backdrop-blur-sm`}>
+          className="fixed left-0 top-0 w-full h-screen bg-navy/50 backdrop-blur-sm z-[30]">
           <motion.div
             initial={{ x: 10 }}
             animate={{ x: 0 }}
             exit={{ x: 10 }}
-            className="flex flex-col md:flex-row justify-center absolute md:static right-0 w-8/12 md:w-fit h-screen md:h-fit bg-light-navy md:bg-transparent gap-7 items-center">
-            <ul className="flex gap-12 flex-col md:flex-row">
+            ref={menuRef}
+            className="flex flex-col justify-center absolute right-0 w-8/12 h-screen bg-light-navy gap-7 items-center">
+            <ul className="flex gap-12 flex-col">
               {navLinks.map((navlink: link, index: number) => (
                 <li
                   key={index}
                   className="text-sm font-sfMono hover:text-green transition-colors ease-button">
-                  <Link href={navlink.url}>
+                  <a href={navlink.url} onClick={() => setIsOpen(false)}>
                     <span className="text-green mr-0.5">0{index + 1}.</span>
                     {navlink.name}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

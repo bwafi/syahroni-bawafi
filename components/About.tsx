@@ -15,10 +15,12 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-36 w-full flex flex-col lg:px-14">
+    <section
+      id="about"
+      className="py-20 sm:py-28 w-full flex flex-col lg:px-14">
       <Title index="01.">About me</Title>
-      <div className="flex flex-col md:flex-row gap-14">
-        <div className="text-slate my-5 w-full md:w-7/12">
+      <div className="flex flex-col md:flex-row gap-12">
+        <div className="text-slate my-5 w-full md:w-8/12 lg:w-7/12">
           <p className="text-lg md:text-xl leading-tight mb-4">
             I am a passionate Front-end Developer with a strong determination to
             excel in the world of web development. Self-motivated and driven, I
@@ -51,7 +53,7 @@ const About = () => {
             ))}
           </ul>
         </div>
-        <div className="img-bg mx-auto img-border rounded group relative md:mt-10 aspect-square w-[180px] md:w-[300px]">
+        <div className="img-bg mx-auto img-border rounded group relative md:mt-10 aspect-square max-w-[300px] w-9/12 md:w-5/12">
           <Image
             src={"/image/me.jpg"}
             alt="Syahroni Bawafi"

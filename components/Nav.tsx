@@ -1,7 +1,6 @@
 "use client";
 import { navLinks } from "@/utils/Links";
-import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import HumburgerMenu from "./ui/HumburgerMenu";
 import Menu from "./ui/Menu";
 
@@ -12,11 +11,41 @@ interface link {
 
 const Nav = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isFixed, setIsFixed] = useState<boolean>(true);
+  const [currentScroll, setCurrentScroll] = useState<number>(0);
+
+  useEffect(() => {
+    const handlerScroll = () => {
+      const scroll = window.scrollY;
+      setIsFixed(scroll < currentScroll);
+      setCurrentScroll(scroll);
+    };
+    window.addEventListener("scroll", handlerScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handlerScroll);
+    };
+  }, [isFixed, currentScroll]);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [isOpen]);
 
   return (
-    <header className="w-full mx-auto fixed top-0 bg-navy left-0 z-50">
-      <nav className="w-full mx-auto py-5 px-6 lg:px-12 flex justify-between items-center">
-        <div>
+    <header
+      className={`fixed w-full mx-auto top-0 bg-navy/10 backdrop-blur left-0 z-50 transition-all ${
+        isFixed && currentScroll > 0
+          ? "translate-y-0 shadow-lg"
+          : currentScroll === 0
+          ? ""
+          : "-translate-y-20 shadow-lg"
+      } ${isOpen ? "backdrop-filter-none" : ""} `}>
+      <nav className="w-full mx-auto py-3 md:py-5 px-6 lg:px-12 flex justify-between items-center">
+        <div className="z-50">
           <h1 className="text-green text-3xl font-sfMono font-semibold">SB</h1>
         </div>
         <div className="hidden md:flex gap-7 items-center">
@@ -25,10 +54,10 @@ const Nav = () => {
               <li
                 key={index}
                 className="text-sm font-sfMono hover:text-green transition-colors ease-button">
-                <Link href={navlink.url}>
+                <a href={navlink.url}>
                   <span className="text-green mr-0.5">0{index + 1}.</span>
                   {navlink.name}
-                </Link>
+                </a>
               </li>
             ))}
           </ul>
