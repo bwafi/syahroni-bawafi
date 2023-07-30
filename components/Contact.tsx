@@ -1,8 +1,14 @@
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <section
+    <motion.section
+      initial={{ y: 20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ ease: [0.645, 0.045, 0.355, 1], duration: 0.3 }}
       id="contact"
       className="w-full mx-auto py-24 sm:py-32 text-center md:px-64">
       <h3 className="text-sm md:text-base text-green font-sfMono before:content-['04.'] before:mr-0.5">
@@ -22,7 +28,7 @@ const Contact = () => {
           Say Hello
         </a>
       </button>
-    </section>
+    </motion.section>
   );
 };
 

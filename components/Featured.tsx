@@ -5,6 +5,7 @@ import Image from "next/image";
 import { FiExternalLink, FiGithub } from "react-icons/fi";
 import projectsData from "../libs/featured.json";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import { motion } from "framer-motion";
 
 interface projectItem {
   name: string;
@@ -18,11 +19,21 @@ interface projectItem {
 const Featured = () => {
   const projects: projectItem[] = projectsData.projects;
   return (
-    <section id="portfolio" className="w-full py-20 mx-auto lg:px-5 ">
+    <motion.section
+      initial={{ y: 20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true, amount: 0.1 }}
+      transition={{ ease: [0.645, 0.045, 0.355, 1], duration: 0.3 }}
+      id="portfolio"
+      className="w-full py-20 mx-auto lg:px-5 ">
       <Title index="02.">Some Things I’ve Built</Title>
       <ul className="my-8 flex flex-col gap-10 md:gap-32">
         {projects.map((project, index: number) => (
-          <li
+          <motion.li
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ ease: [0.645, 0.045, 0.355, 1], duration: 0.3 }}
             key={index}
             className="w-full grid grid-cols-12 items-center group rounded">
             <div className="z-[5] md:z-auto relative col-start-1 md:col-start-7 col-end-13 md:group-even:col-start-1 md:group-even:col-end-7 md:text-right group-even:text-left row-start-1 p-6 md:p-0 navy-shadow md:shadow-none">
@@ -84,10 +95,10 @@ const Featured = () => {
                 />
               </a>
             </div>
-          </li>
+          </motion.li>
         ))}
       </ul>
-    </section>
+    </motion.section>
   );
 };
 

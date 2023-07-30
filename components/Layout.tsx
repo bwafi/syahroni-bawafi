@@ -6,12 +6,12 @@ import Footer from "./Footer";
 
 const Layout = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="w-full mx-auto flex flex-col min-h-screen">
+    <div className="w-full mx-auto flex flex-col">
       <Nav />
       <Social />
       <Email />
 
-      <div className="grid flex-1 place-items-center min-h-full">
+      <div className="grid flex-1 place-items-center">
         {children}
         <Footer />
       </div>

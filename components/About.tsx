@@ -1,6 +1,8 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import Title from "./ui/Title";
+import { motion } from "framer-motion";
 
 const About = () => {
   const skills = [
@@ -15,11 +17,15 @@ const About = () => {
   ];
 
   return (
-    <section
+    <motion.section
+      initial={{ y: 20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ ease: [0.645, 0.045, 0.355, 1], duration: 0.3 }}
       id="about"
-      className="py-20 sm:py-28 w-full flex flex-col lg:px-14">
+      className="py-20 sm:py-28 w-full flex flex-col lg:px-14 mx-auto">
       <Title index="01.">About me</Title>
-      <div className="flex flex-col md:flex-row gap-12">
+      <div className="flex flex-col md:flex-row gap-13">
         <div className="text-slate my-5 w-full md:w-8/12 lg:w-7/12">
           <p className="text-lg md:text-xl leading-tight mb-4">
             I am a passionate Front-end Developer with a strong determination to
@@ -59,11 +65,11 @@ const About = () => {
             alt="Syahroni Bawafi"
             width={300}
             height={300}
-            className="rounded mix-blend-multiply grayscale contrast-100 absolute group-hover:filter-none group-hover:mix-blend-normal group-hover:-translate-y-1 group-hover:-translate-x-1 transition-all duration-300 ease-button"
+            className="rounded mx-auto mix-blend-multiply grayscale contrast-100 absolute group-hover:filter-none group-hover:mix-blend-normal group-hover:-translate-y-1 group-hover:-translate-x-1 transition-all duration-300 ease-button"
           />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

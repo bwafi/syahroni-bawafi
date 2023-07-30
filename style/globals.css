@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-navy;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-[#495670] border-[3px] border-navy rounded-xl;
+}
+
 .small-button:hover {
   @apply shadow-[4px_4px_0_0_#64ffda];
 }
@@ -23,7 +33,7 @@
 }
 
 .big-heading {
-  font-size: clamp(40px, 8vw, 80px);
+  font-size: clamp(38px, 8vw, 80px);
 }
 
 .small-heading {
