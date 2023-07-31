@@ -57,7 +57,9 @@ const Nav = () => {
           whileInView="show"
           viewport={{ once: true }}
           className="z-50">
-          <h1 className="text-green text-3xl font-sfMono font-semibold">SB</h1>
+          <h1 className="text-green text-3xl font-sfMono font-semibold">
+            <a href="/">SB</a>
+          </h1>
         </motion.div>
         <div className="hidden md:flex gap-7 items-center">
           <ul className="flex gap-5">
