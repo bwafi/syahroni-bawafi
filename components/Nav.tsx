@@ -73,7 +73,11 @@ const Nav = () => {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
+                transition={{
+                  delay: index * 0.1,
+                  ease: [0.645, 0.045, 0.355, 1],
+                  duration: 0.3,
+                }}
                 key={index}
                 className="text-sm font-sfMono hover:text-green transition-colors ease-button">
                 <a href={navlink.url}>
@@ -89,7 +93,11 @@ const Nav = () => {
             initial="hidden"
             whileInView="show"
             viewport={{ once: true }}
-            transition={{ delay: navLinks.length * 0.1 }}>
+            transition={{
+              delay: navLinks.length * 0.1,
+              ease: [1.645, 0.045, 0.355, 1],
+              duration: 0.3,
+            }}>
             <button className="text-green font-sfMono bg-transparent border border-green py-1.5 px-4 rounded text-sm small-button  hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200 ease-button">
               Resume
             </button>
