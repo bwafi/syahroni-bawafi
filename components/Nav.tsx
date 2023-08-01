@@ -56,6 +56,10 @@ const Nav = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
+          transition={{
+            ease: [0.645, 0.045, 0.355, 1],
+            duration: 0.3,
+          }}
           className="z-50">
           <h1 className="text-green text-3xl font-sfMono font-semibold">
             <a href="/">SB</a>
@@ -97,7 +101,11 @@ const Nav = () => {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true }}
-          transition={{ delay: 0.1 }}
+          transition={{
+            delay: 0.1,
+            ease: [0.645, 0.045, 0.355, 1],
+            duration: 0.3,
+          }}
           className="block md:hidden">
           <HumburgerMenu isOpen={isOpen} setIsOpen={setIsOpen} />
         </motion.div>
