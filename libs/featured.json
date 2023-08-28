@@ -1,6 +1,14 @@
 {
   "projects": [
     {
+      "name": "Movie Pulse",
+      "image": "/featured/movie-pulse.png",
+      "desc": "Movie Pulse is a web-based platform that allows users to explore the world of movies through the public API of [TMDb (The Movie Database)](https://www.themoviedb.org/). With an attractive and intuitive interface, users can find information about various films, from popular films to currently showing ones. The powerful search feature allows users to easily find the movies they are interested in by title, genre or even actor names.",
+      "techs": ["Next JS", "Tailwind CSS", "Typescript"],
+      "github": "https://github.com/bwafi/movie-pulse",
+      "url": "https://movie-pulse.vercel.app/"
+    },
+    {
       "name": "Quran Portal",
       "image": "/featured/quran-portal.png",
       "desc": "A web based Quran app and prayer schedule that uses the public API from [gadingnst](https://github.com/gadingnst/quran-api) and prayed schedule API from [lakuapik](https://github.com/lakuapik/jadwalsholatorg), equipped with several features such as dark theme, murottal, Indonesian translation, interpretation of surah/verses, and several other features",
