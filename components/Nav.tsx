@@ -98,9 +98,11 @@ const Nav = () => {
               ease: [0.645, 0.045, 0.355, 1],
               duration: 0.3,
             }}>
-            <button className="text-green font-sfMono bg-transparent border border-green py-1.5 px-4 rounded text-sm small-button  hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200 ease-button">
-              Resume
-            </button>
+            <a target="_blank" href="/syahroni_bawafi_cv.pdf">
+              <div className="block text-green font-sfMono bg-transparent border border-green py-1.5 px-4 rounded text-sm small-button  hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200 ease-button">
+                Resume
+              </div>
+            </a>
           </motion.div>
         </div>
 
