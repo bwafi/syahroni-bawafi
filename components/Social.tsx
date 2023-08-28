@@ -31,9 +31,7 @@ const Social = () => {
           </a>
         </li>
         <li>
-          <a
-            href="https://www.linkedin.com/in/syahroni-bawafi-93b422265/"
-            target="_blank">
+          <a href="https://www.linkedin.com/in/syahroni-bawafi" target="_blank">
             <FiLinkedin className="hover:text-green hover:-translate-y-1 transition-all duration-200" />
           </a>
         </li>
