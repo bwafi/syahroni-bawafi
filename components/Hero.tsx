@@ -87,7 +87,7 @@ const Hero = () => {
           ease: [0.645, 0.045, 0.355, 1],
           duration: 0.3,
         }}>
-        <a href="/syahroni_bawafi_cv.pdf" target="_blank">
+        <a href="/cv.pdf" target="_blank">
           <button className="mt-10 md:mt-16 font-sfMono small-button text-sm rounded text-green py-3 px-8 border border-green hover:-translate-x-1 hover:-translate-y-1 transition-all duration-200 ease-button">
             Download My Resume / CV
           </button>
