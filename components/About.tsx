@@ -6,14 +6,20 @@ import { motion } from "framer-motion";
 
 const About = () => {
   const skills = [
-    "HTML5",
-    "CSS3",
     "Tailwind CSS",
     "TypeScript",
     "Javascript (ES6)",
     "React Js",
+    "React Native",
     "Next Js",
     "Redux Toolkit",
+    "GO-Language",
+    "Java",
+    "Spring Boot",
+    "PostgreSQL",
+    "Mysql",
+    "Docker",
+    "Linux"
   ];
 
   return (
@@ -28,25 +34,10 @@ const About = () => {
       <div className="flex flex-col md:flex-row gap-13">
         <div className="text-slate my-5 w-full md:w-8/12 lg:w-7/12">
           <p className="text-lg md:text-xl leading-tight mb-4">
-            I am a passionate Front-end Developer with a strong determination to
-            excel in the world of web development. Self-motivated and driven, I
-            have honed my skills through self-directed learning, exploring the
-            latest trends, and mastering various front-end technologies on my
-            own.
+            Hello! My name is Syahroni Bawafi, and I am a passionate Full Stack Developer committed to excelling in web development. Through self-motivation and continuous learning, I've honed my skills in both front-end and back-end technologies, staying up-to-date with the latest trends.
           </p>
           <p className="text-lg md:text-xl leading-tight mb-4">
-            My journey as an autodidact in web development has been a rewarding
-            experience, as it allowed me to continuously challenge myself and
-            stay curious about emerging technologies and best practices. From
-            building interactive user interfaces to optimizing website
-            performance, I take pride in creating seamless and visually
-            appealing digital experiences.
-          </p>
-          <p className="text-lg md:text-xl leading-tight mb-4">
-            Throughout my learning journey, I have come to understand the
-            importance of user-centric design and accessibility. I am committed
-            to crafting websites that are not only visually stunning but also
-            intuitive and inclusive for all users.
+            My journey as an autodidact has allowed me to build interactive user interfaces and develop robust back-end systems. I take pride in creating seamless, efficient, and user-centric digital experiences that are not only visually appealing but also secure and accessible.
           </p>
           <p className="text-lg md:text-xl leading-tight mb-2">
             Here are a few technologies I’ve been working with recently:

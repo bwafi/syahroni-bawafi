@@ -72,9 +72,7 @@ const Hero = () => {
           duration: 0.3,
         }}
         className="w-full lg:w-7/12 text-slate text-lg md:text-[20px] leading-[26px] font-calibre mt-5">
-        I'm a Front-nd Developer, I'm dedicated to building amazing digital
-        products. I am passionate about contributing to innovative projects and
-        ready to learn and grow in my career as a Software Software Engineering
+        I am a Fullstack Developer dedicated to building amazing digital products. Passionate about contributing to innovative projects, I am eager to learn and grow in my career as a Software Engineer.
       </motion.p>
 
       <motion.div
