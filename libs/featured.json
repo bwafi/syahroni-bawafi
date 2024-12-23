@@ -4,7 +4,11 @@
       "name": "Movie Pulse",
       "image": "/featured/movie-pulse.png",
       "desc": "Movie Pulse is a web-based platform that allows users to explore the world of movies through the public API of [TMDb (The Movie Database)](https://www.themoviedb.org/). With an attractive and intuitive interface, users can find information about various films, from popular films to currently showing ones. The powerful search feature allows users to easily find the movies they are interested in by title, genre or even actor names.",
-      "techs": ["Next JS", "Tailwind CSS", "Typescript"],
+      "techs": [
+        "Next JS",
+        "Tailwind CSS",
+        "Typescript"
+      ],
       "github": "https://github.com/bwafi/movie-pulse",
       "url": "https://movie-pulse.vercel.app/"
     },
@@ -12,15 +16,36 @@
       "name": "Quran Portal",
       "image": "/featured/quran-portal.png",
       "desc": "A web based Quran app and prayer schedule that uses the public API from [gadingnst](https://github.com/gadingnst/quran-api) and prayed schedule API from [lakuapik](https://github.com/lakuapik/jadwalsholatorg), equipped with several features such as dark theme, murottal, Indonesian translation, interpretation of surah/verses, and several other features",
-      "techs": ["Next JS", "Tailwind CSS", "Redux Toolkit"],
+      "techs": [
+        "Next JS",
+        "Tailwind CSS",
+        "Redux Toolkit"
+      ],
       "github": "https://github.com/bwafi/quran-portal",
       "url": "https://quran-portal.vercel.app/"
+    },
+    {
+      "name": "GAMESANTARA",
+      "image": "/featured/gamesantara.png",
+      "desc": "GAMESANTARA is a gaming-focused forum website created as part of a bootcamp final project. The platform allows gamers to connect, share experiences, and build communities through various interactive features. As part of the development team, I contributed to both frontend and backend aspects, along with mobile app integration. ",
+      "techs": [
+        "React JS",
+        "Tailwind CSS",
+        "Typescript",
+        "Java",
+        "Spring Boot",
+        "React Native"
+      ]
     },
     {
       "name": "Chomp Restaurant",
       "image": "/featured/chomp-restaurant.png",
       "desc": "A web burger restaurant to order burgers, drinks and sides. built using next js and tailwind CSS with React context state management",
-      "techs": ["Next JS", "Tailwind CSS", "React Context"],
+      "techs": [
+        "Next JS",
+        "Tailwind CSS",
+        "React Context"
+      ],
       "github": "https://github.com/bwafi/chomp-restaurant",
       "url": "https://chomp-restaurant-syahroni.vercel.app/"
     },
@@ -28,7 +53,11 @@
       "name": "Find Trend",
       "image": "/featured/find-trend.png",
       "desc": "Landing page that has an interactive and responsive display, introduces you to the projects I have completed. I try to combine the beauty of design with powerful functionality to provide a pleasant user experience.",
-      "techs": ["Next JS", "Tailwind CSS", "Typescript"],
+      "techs": [
+        "Next JS",
+        "Tailwind CSS",
+        "Typescript"
+      ],
       "github": "https://github.com/bwafi/find-trend-web",
       "url": "https://find-trend-web.vercel.app/"
     }

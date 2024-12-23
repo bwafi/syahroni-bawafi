@@ -12,8 +12,8 @@ interface projectItem {
   desc: string;
   image: string;
   techs: string[];
-  github: string;
-  url: string;
+  github?: string;
+  url?: string;
 }
 
 const Featured = () => {
@@ -67,18 +67,24 @@ const Featured = () => {
                 ))}
               </ul>
               <div className="relative flex text-xl group-even:justify-start justify-start md:justify-end gap-5 z-[2]">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  className="hover:text-green">
-                  <FiGithub />
-                </a>
-                <a
-                  href={project.url}
-                  target="_blank"
-                  className="hover:text-green">
-                  <FiExternalLink />
-                </a>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    className="hover:text-green">
+                    <FiGithub />
+                  </a>
+
+                )}
+
+                {project.url && (
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    className="hover:text-green">
+                    <FiExternalLink />
+                  </a>
+                )}
               </div>
             </div>
             <div className="group/img w-full opacity-25 md:opacity-100 h-full col-start-1 col-end-13 md:col-end-8 md:group-even:col-start-6 md:group-even:col-end-13 z-[2] relative row-start-1 row-end-2">
