@@ -7,7 +7,7 @@ import Layout from "@/components/Layout";
 export default function Home() {
   return (
     <Layout>
-      <main className="w-full mx-auto px-6 md:px-24 lg:px-40 overflow-x-hidden min-h-screen overflow-y-hidden">
+      <main className="w-full mx-auto px-6 md:px-24 lg:px-80 overflow-x-hidden min-h-screen overflow-y-hidden">
         <Hero />
         <About />
         <Featured />

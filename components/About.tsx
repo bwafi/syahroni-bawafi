@@ -29,7 +29,7 @@ const About = () => {
       viewport={{ once: true, amount: 0.3 }}
       transition={{ ease: [0.645, 0.045, 0.355, 1], duration: 0.3 }}
       id="about"
-      className="py-20 sm:py-28 w-full flex flex-col lg:px-14 mx-auto">
+      className="py-20 sm:py-28 w-full flex flex-col lg:px-20 mx-auto">
       <Title index="01.">About me</Title>
       <div className="flex flex-col md:flex-row gap-13">
         <div className="text-slate my-5 w-full md:w-8/12 lg:w-7/12">
